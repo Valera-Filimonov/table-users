@@ -44,6 +44,7 @@
     ]
   },
   "devDependencies": {
-    "@mui/lab": "^5.0.0-alpha.62"
+    "@mui/lab": "^5.0.0-alpha.62",
+    "typescript": "^4.9.4"
   }
 }
