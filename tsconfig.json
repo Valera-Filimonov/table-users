@@ -17,10 +17,13 @@
     "skipLibCheck": true,
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
+    "files": ["./node_modules/wmr/types.d.ts"],
     "noFallthroughCasesInSwitch": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true
+    "checkJs": true,
+    "noEmit": true,
+    "downlevelIteration": true
   },
   "include": [
     "src"

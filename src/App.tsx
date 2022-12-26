@@ -1,9 +1,10 @@
 import './app.module.css';
+import Header from "./component/Header";
 
 const App = (): JSX.Element => {
     return (
         <>
-            <h1>Привет, мир!</h1>
+            <Header />
         </>
     );
 }
