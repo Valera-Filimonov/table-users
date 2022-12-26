@@ -3,6 +3,7 @@
     background: #d3d7d3;
     height: 60px;
     display: flex;
+    min-width: 485px;
 }
 
 .button {

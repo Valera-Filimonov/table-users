@@ -1,0 +1,14 @@
+.boxButtonModal {
+    display: flex;
+    margin-top: 30px;
+}
+
+.buttonClose {
+    margin-left: 10px;
+    margin-right: 0
+}
+
+.buttonAdd {
+    margin-left: auto;
+    margin-right: 0
+}
