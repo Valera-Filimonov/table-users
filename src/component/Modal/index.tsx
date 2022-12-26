@@ -11,6 +11,8 @@ import {ChangeEvent, useState} from "react";
 type PropsModalAddUser = {
     open: boolean;
     setOpen: (open: boolean) => void;
+    status: boolean;
+    setStatus: (status: boolean) => void;
 }
 
 const style = {
@@ -26,7 +28,7 @@ const style = {
     p: 4,
 };
 
-const ModalAddUser = ({open, setOpen}: PropsModalAddUser): JSX.Element => {
+const ModalAddUser = ({open, setOpen, status, setStatus}: PropsModalAddUser): JSX.Element => {
 
     const [id, setId] = useState<string>('');
     const [email, setEmail] = useState<string>('');
@@ -35,9 +37,14 @@ const ModalAddUser = ({open, setOpen}: PropsModalAddUser): JSX.Element => {
     const [birthDate, setBirthDate] = useState<string>('')
     const [access, setAccess] = useState<boolean>(false);
 
+    const [errorId, setErrorId] = useState<boolean>(false);
+    const [errorEmail, setErrorEmail] = useState<boolean>(false);
+    const [errorName, setErrorName] = useState<boolean>(false);
+    const [errorLastName, setErrorLastName] = useState<boolean>(false);
+    const [errorBirthDate, setErrorBirthDate] = useState<boolean>(false);
+
     const handlerOnChangeId = (event: ChangeEvent<HTMLInputElement>) => {
         setId(event.target.value);
-        console.log(id)
     }
     const handlerOnChangeEmail = (event: ChangeEvent<HTMLInputElement>) => {
         setEmail(event.target.value);
@@ -87,6 +94,7 @@ const ModalAddUser = ({open, setOpen}: PropsModalAddUser): JSX.Element => {
                                    variant="outlined"
                                    value={id}
                                    onChange={handlerOnChangeId}
+                                   error={errorId}
                         />
                     </div>
                     <div className={styles.input}>
@@ -95,6 +103,7 @@ const ModalAddUser = ({open, setOpen}: PropsModalAddUser): JSX.Element => {
                                    label="email"
                                    variant="outlined"
                                    onChange={handlerOnChangeEmail}
+                                   error={errorEmail}
                         />
                     </div>
                     <div className={styles.input}>
@@ -103,6 +112,7 @@ const ModalAddUser = ({open, setOpen}: PropsModalAddUser): JSX.Element => {
                                    label="Имя"
                                    variant="outlined"
                                    onChange={handlerOnChangeName}
+                                   error={errorName}
                         />
                     </div>
                     <div className={styles.input}>
@@ -111,6 +121,7 @@ const ModalAddUser = ({open, setOpen}: PropsModalAddUser): JSX.Element => {
                                    label="Фамилия"
                                    variant="outlined"
                                    onChange={handlerOnChangeLastName}
+                                   error={errorLastName}
                         />
                     </div>
                     <div className={styles.input}>
@@ -119,6 +130,7 @@ const ModalAddUser = ({open, setOpen}: PropsModalAddUser): JSX.Element => {
                                    label="Дата рождения"
                                    variant="outlined"
                                    onChange={handlerOnChangeBirthDate}
+                                   error={errorBirthDate}
                         />
                     </div>
                     <div className={styles.checkBox}>
@@ -135,7 +147,31 @@ const ModalAddUser = ({open, setOpen}: PropsModalAddUser): JSX.Element => {
                     </div>
 
                     <div className={styles.boxButtonModal}>
-                        <ButtonAdd open={open} setOpen={setOpen}/>
+                        <ButtonAdd open={open}
+                                   setOpen={setOpen}
+
+                                   status={status}
+                                   setStatus={setStatus}
+
+                                   id={id}
+                                   email={email}
+                                   name={name}
+                                   lastName={lastName}
+                                   birthDate={birthDate}
+
+                                   setId={setId}
+                                   setEmail={setEmail}
+                                   setName={setName}
+                                   setLastName={setLastName}
+                                   setBirthDate={setBirthDate}
+
+
+                                   setErrorId={setErrorId}
+                                   setErrorEmail={setErrorEmail}
+                                   setErrorName={setErrorName}
+                                   setErrorLastName={setErrorLastName}
+                                   setErrorBirthDay={setErrorBirthDate}
+                        />
                         <ButtonClose open={open} setOpen={setOpen}/>
                     </div>
                 </Box>

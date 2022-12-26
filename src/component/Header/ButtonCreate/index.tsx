@@ -2,13 +2,25 @@ import Stack from "@mui/material/Stack";
 import Button from '@mui/material/Button';
 import * as React from "react";
 import styles from '../header.module.css'
+import {useEffect} from "react";
 
 type PropsButtonCreate = {
     open: boolean;
     setOpen: (open: boolean) => void;
+    status: boolean;
+    setStatus: (status: boolean) => void;
 }
 
-const ButtonCreate = ({open, setOpen}: PropsButtonCreate): JSX.Element => {
+const ButtonCreate = ({open, setOpen, status, setStatus}: PropsButtonCreate): JSX.Element => {
+
+    useEffect(() => {
+        if (status) {
+            setTimeout(() => {
+                setStatus(false);
+            }, 500)
+        }
+    }, [status])
+
 
     const handlerOpenModal = () => {
         setOpen(!open);
@@ -18,7 +30,21 @@ const ButtonCreate = ({open, setOpen}: PropsButtonCreate): JSX.Element => {
     return (
         <div className={styles.button}>
             <Stack spacing={2} direction="row">
-                <Button onClick={handlerOpenModal} variant="contained">Создать</Button>
+                {!status &&
+                <Button onClick={handlerOpenModal}
+                        variant="contained"
+                >
+                    Создать
+                </Button>
+                }
+                {status &&
+                <Button onClick={handlerOpenModal}
+                        variant="contained"
+                        color="success"
+                >
+                    Добавлен
+                </Button>
+                }
             </Stack>
         </div>
     );

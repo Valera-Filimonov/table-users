@@ -6,13 +6,97 @@ import styles from '../modal.module.css'
 type PropsButtonAdd = {
     open: boolean;
     setOpen: (open: boolean) => void;
+    status: boolean;
+    setStatus: (status: boolean) => void;
+
+    id: string;
+    email: string;
+    name: string;
+    lastName: string;
+    birthDate: string;
+
+    setId: (arg: string) => void;
+    setEmail: (arg: string) => void;
+    setName: (arg: string) => void;
+    setLastName: (arg: string) => void;
+    setBirthDate: (arg: string) => void;
+
+    setErrorId: (arg: boolean) => void;
+    setErrorEmail: (arg: boolean) => void;
+    setErrorName: (arg: boolean) => void;
+    setErrorLastName: (arg: boolean) => void;
+    setErrorBirthDay: (arg: boolean) => void;
+
 }
 
-const ButtonAdd = ({open, setOpen}: PropsButtonAdd): JSX.Element => {
+const ButtonAdd = ({
+                       open,
+                       setOpen,
+                       status,
+                       setStatus,
+
+                       id,
+                       email,
+                       name,
+                       lastName,
+                       birthDate,
+
+                       setId,
+                       setName,
+                       setLastName,
+                       setBirthDate,
+                       setEmail,
+
+                       setErrorId,
+                       setErrorEmail,
+                       setErrorName,
+                       setErrorLastName,
+                       setErrorBirthDay,
+                   }: PropsButtonAdd):
+    JSX.Element => {
 
     const handlerCloseModal = () => {
-        setOpen(!open);
-        console.log(open)
+        if (!/^(0|[1-9]\d*)$/g.test(id)) {
+            setErrorId(true);
+        } else {
+            setErrorId(false);
+        }
+        if (!/^\S+@\S+\.\S+$/g.test(email)) {
+            setErrorEmail(true);
+        } else {
+            setErrorEmail(false);
+        }
+        if (!/^[a-zA-Zа-яА-Я]+$/g.test(name)) {
+            setErrorName(true);
+        } else {
+            setErrorName(false);
+        }
+        if (!/^[a-zA-Zа-яА-Я]+$/g.test(lastName)) {
+            setErrorLastName(true);
+        } else {
+            setErrorLastName(false);
+        }
+        if (!/^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/g.test(birthDate)) {
+            setErrorBirthDay(true);
+        } else {
+            setErrorBirthDay(false);
+        }
+        if (
+            /^(0|[1-9]\d*)$/g.test(id) &&
+            /^\S+@\S+\.\S+$/g.test(email) &&
+            /^[a-zA-Zа-яА-Я]+$/g.test(name) &&
+            /^[a-zA-Zа-яА-Я]+$/g.test(lastName) &&
+            /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/g.test(birthDate)
+        ) {
+            setOpen(!open)
+            setStatus(!status);
+
+            setId('')
+            setName('')
+            setLastName('')
+            setBirthDate('')
+            setEmail('')
+        }
     }
 
     return (
