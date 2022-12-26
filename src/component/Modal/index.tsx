@@ -7,13 +7,7 @@ import styles from './modal.module.css'
 import ButtonAdd from './ButtonAdd';
 import ButtonClose from './ButtonClose';
 import {ChangeEvent, useState} from "react";
-
-type PropsModalAddUser = {
-    open: boolean;
-    setOpen: (open: boolean) => void;
-    status: boolean;
-    setStatus: (status: boolean) => void;
-}
+import { PropsModalAddUser } from './types';
 
 const style = {
     position: 'absolute' as 'absolute',

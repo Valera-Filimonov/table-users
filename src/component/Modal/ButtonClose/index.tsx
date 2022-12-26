@@ -2,11 +2,7 @@ import Stack from "@mui/material/Stack";
 import Button from '@mui/material/Button';
 import * as React from "react";
 import styles from '../modal.module.css'
-
-type PropsButtonClose = {
-    open: boolean;
-    setOpen: (open: boolean) => void;
-}
+import { PropsButtonClose } from "../types";
 
 const ButtonClose = ({open, setOpen}: PropsButtonClose): JSX.Element => {
 

@@ -3,13 +3,7 @@ import Button from '@mui/material/Button';
 import * as React from "react";
 import styles from '../header.module.css'
 import {useEffect} from "react";
-
-type PropsButtonCreate = {
-    open: boolean;
-    setOpen: (open: boolean) => void;
-    status: boolean;
-    setStatus: (status: boolean) => void;
-}
+import { PropsButtonCreate } from "../types";
 
 const ButtonCreate = ({open, setOpen, status, setStatus}: PropsButtonCreate): JSX.Element => {
 

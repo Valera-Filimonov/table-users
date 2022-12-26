@@ -1,13 +1,7 @@
 import ButtonCreate from './ButtonCreate';
 import styles from './header.module.css'
 import {Typography} from "@mui/material";
-
-type PropsHeader = {
-    open: boolean;
-    setOpen: (open: boolean) => void;
-    status: boolean;
-    setStatus: (status: boolean) => void;
-}
+import { PropsHeader } from './types';
 
 const Header = ({open, setOpen, status, setStatus}: PropsHeader): JSX.Element => {
     return (

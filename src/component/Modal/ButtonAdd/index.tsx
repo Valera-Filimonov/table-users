@@ -2,32 +2,7 @@ import Stack from "@mui/material/Stack";
 import Button from '@mui/material/Button';
 import * as React from "react";
 import styles from '../modal.module.css'
-
-type PropsButtonAdd = {
-    open: boolean;
-    setOpen: (open: boolean) => void;
-    status: boolean;
-    setStatus: (status: boolean) => void;
-
-    id: string;
-    email: string;
-    name: string;
-    lastName: string;
-    birthDate: string;
-
-    setId: (arg: string) => void;
-    setEmail: (arg: string) => void;
-    setName: (arg: string) => void;
-    setLastName: (arg: string) => void;
-    setBirthDate: (arg: string) => void;
-
-    setErrorId: (arg: boolean) => void;
-    setErrorEmail: (arg: boolean) => void;
-    setErrorName: (arg: boolean) => void;
-    setErrorLastName: (arg: boolean) => void;
-    setErrorBirthDay: (arg: boolean) => void;
-
-}
+import { PropsButtonAdd } from "../types";
 
 const ButtonAdd = ({
                        open,
@@ -102,7 +77,10 @@ const ButtonAdd = ({
     return (
         <div className={styles.buttonAdd}>
             <Stack spacing={2} direction="row">
-                <Button onClick={handlerCloseModal} variant="contained">Добавить</Button>
+                <Button onClick={handlerCloseModal}
+                        variant="contained">
+                    Добавить
+                </Button>
             </Stack>
         </div>
     );
