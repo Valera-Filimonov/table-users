@@ -31,7 +31,7 @@ const Table = (): JSX.Element => {
         {
             field: 'email',
             headerName: 'Email',
-            width: 150,
+            width: 250,
             editable: true,
         },
         {
@@ -60,18 +60,18 @@ const Table = (): JSX.Element => {
     ];
 
     const rows = [
-        {id: 1, lastName: 'Snow', name: 'Jon', birthDate: '01/12/2022', access: true},
-        {id: 2, lastName: 'Lannister', name: 'Cersei', birthDate: '02/12/2022', access: false},
-        {id: 3, lastName: 'Lannister', name: 'Jaime', birthDate: '03/12/2022', access: true},
-        {id: 4, lastName: 'Stark', name: 'Arya', birthDate: '03/12/2022', access: false},
-        {id: 6, lastName: 'Melisandre', name: null, birthDate: '05/12/2022', access: true},
-        {id: 7, lastName: 'Clifford', name: 'Ferrara', birthDate: '06/12/2022', access: false},
-        {id: 8, lastName: 'Frances', name: 'Rossini', birthDate: '07/12/2022', access: false},
-        {id: 9, lastName: 'Roxie', name: 'Harvey', birthDate: '08/12/2022', access: true},
-        {id: 10, lastName: 'Roxie', name: 'Harvey', birthDate: '09/12/2022', access: false},
-        {id: 11, lastName: 'Snow', name: 'Jon', birthDate: '09/12/2022', access: true},
-        {id: 12, lastName: 'Lannister', name: 'Cersei', birthDate: '10/12/2022', access: true},
-        {id: 13, lastName: 'Lannister', name: 'Jaime', birthDate: '11/12/2022', access: false},
+        {id: 1, lastName: 'Snow', name: 'Jon', email: "fskirling2p@adobe.com", birthDate: '01/12/2022', access: true},
+        {id: 2, lastName: 'Lannister', name: 'Cersei',  email: "fskirling2p@adobe.com", birthDate: '02/12/2022', access: false},
+        {id: 3, lastName: 'Lannister', name: 'Jaime',  email: "fskirling2p@adobe.com", birthDate: '03/12/2022', access: true},
+        {id: 4, lastName: 'Stark', name: 'Arya', email: "fskirling2p@adobe.com", birthDate: '03/12/2022', access: false},
+        {id: 6, lastName: 'Melisandre', name: null, email: "fskirling2p@adobe.com", birthDate: '05/12/2022', access: true},
+        {id: 7, lastName: 'Clifford', name: 'Ferrara', email: "fskirling2p@adobe.com", birthDate: '06/12/2022', access: false},
+        {id: 8, lastName: 'Frances', name: 'Rossini', email: "fskirling2p@adobe.com", birthDate: '07/12/2022', access: false},
+        {id: 9, lastName: 'Roxie', name: 'Harvey', email: "fskirling2p@adobe.com", birthDate: '08/12/2022', access: true},
+        {id: 10, lastName: 'Roxie', name: 'Harvey', email: "fskirling2p@adobe.com", birthDate: '09/12/2022', access: false},
+        {id: 11, lastName: 'Snow', name: 'Jon', email: "fskirling2p@adobe.com", birthDate: '09/12/2022', access: true},
+        {id: 12, lastName: 'Lannister', name: 'Cersei', email: "fskirling2p@adobe.com", birthDate: '10/12/2022', access: true},
+        {id: 13, lastName: 'Lannister', name: 'Jaime', email: "fskirling2p@adobe.com", birthDate: '11/12/2022', access: false},
     ];
 
 
