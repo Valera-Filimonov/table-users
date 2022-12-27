@@ -1,4 +1,4 @@
-# Application for managing user records
+# Application for managing user records in table
 
 You can view the application on the website:
 
