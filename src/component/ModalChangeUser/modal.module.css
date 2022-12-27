@@ -1,0 +1,31 @@
+.boxButtonModal {
+    display: flex;
+    margin-top: 30px;
+}
+
+.buttonClose {
+    margin-left: 10px;
+    margin-right: 0
+}
+
+.buttonAdd {
+    margin-left: auto;
+    margin-right: 0
+}
+
+.input {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.title {
+    margin-bottom: 10px !important;
+}
+
+.checkBox {
+    display: flex;
+}
+
+.titleCheckBox {
+    margin-top: 10px !important;
+}

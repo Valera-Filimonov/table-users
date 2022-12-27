@@ -1,18 +1,24 @@
 import ButtonCreate from './ButtonCreate';
 import styles from './header.module.css'
 import {Typography} from "@mui/material";
-import { PropsHeader } from './types';
+import {PropsHeader} from './types';
 import ButtonDelete from "./ButtonDelete";
+import ButtonChange from "./ButtonChange";
 
-const Header = ({open,
-                 setOpen,
-                 accept,
-                 setAccept,
-                 selectedRow,
-                 statusButtonCreate,
-                 setStatusButtonCreate,
-                 statusButtonDelete,
-                 setStatusButtonDelete
+const Header = ({
+                    open,
+                    setOpen,
+                    change,
+                    setChange,
+                    accept,
+                    setAccept,
+                    selectedRow,
+                    statusButtonChange,
+                    setStatusButtonChange,
+                    statusButtonCreate,
+                    setStatusButtonCreate,
+                    statusButtonDelete,
+                    setStatusButtonDelete
                 }: PropsHeader): JSX.Element => {
     return (
         <div className={styles.header}>
@@ -23,6 +29,12 @@ const Header = ({open,
                               selectedRow={selectedRow}
                               accept={accept}
                               setAccept={setAccept}
+                />
+                <ButtonChange change={change}
+                              selectedRow={selectedRow}
+                              setChange={setChange}
+                              statusButtonChange={statusButtonChange}
+                              setStatusButtonChange={setStatusButtonChange}
                 />
                 <ButtonCreate open={open}
                               setOpen={setOpen}

@@ -18,7 +18,7 @@ const ButtonDelete = ({
     const handlerCloseModal = async () => {
             setAccept(!accept);
             setStatusButtonDelete(!statusButtonDelete);
-            await deleteUser(selectedRow);
+            await deleteUser(selectedRow.id);
             setSelectedRow(null);
     }
 

@@ -10,7 +10,7 @@ const Table = ({setSelectedRow, data, error, isLoading}: PropsTable): JSX.Elemen
     const [pageSize, setPageSize] = useState<number>(10)
 
     const handlerSelectedRow = (params: ParamsSelectedRow): boolean => {
-        setSelectedRow(params.id);
+        setSelectedRow(params);
         console.log(params)
         return true
     }
@@ -21,14 +21,11 @@ const Table = ({setSelectedRow, data, error, isLoading}: PropsTable): JSX.Elemen
             field: 'name',
             headerName: 'Имя',
             width: 150,
-            //позволяет редактировать ячейки
-            editable: true,
         },
         {
             field: 'lastName',
             headerName: 'Фамилия',
             width: 150,
-            editable: true,
         },
         {
             field: 'fullName',
@@ -42,19 +39,16 @@ const Table = ({setSelectedRow, data, error, isLoading}: PropsTable): JSX.Elemen
             field: 'email',
             headerName: 'Email',
             width: 250,
-            editable: true,
         },
         {
             field: 'birthDate',
             headerName: 'День рождения',
             width: 150,
-            editable: true,
         },
         {
             field: 'access',
             headerName: 'Доступ',
             width: 150,
-            editable: true,
             renderCell: (params: GridCellParams) => {
                 if (params.value === true) {
                     return (

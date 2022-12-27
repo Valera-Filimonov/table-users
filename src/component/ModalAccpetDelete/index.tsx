@@ -31,7 +31,7 @@ const ModalAccpetDelete = ({
     const handlerOnClose = () => {
         setAccept(!accept)
     }
-
+    console.log(selectedRow)
     return (
         <>
             <Modal
@@ -49,7 +49,7 @@ const ModalAccpetDelete = ({
                         Подвердите действие
                     </Typography>
                     <Typography id="modal-modal-description" sx={{mt: 2}}>
-                        Уверены, что хотите удалить пользователя c id: {selectedRow}
+                        Уверены, что хотите удалить пользователя c id: {selectedRow?.id}
                     </Typography>
                     <div className={styles.boxButtonModal}>
                         <ButtonDelete accept={accept}
