@@ -1,0 +1,13 @@
+.boxButtonModal {
+    float: right;
+    display: flex;
+    margin-top: 30px;
+}
+
+.buttonClose {
+    margin-left: 10px;
+}
+
+.title {
+    margin-bottom: 10px !important;
+}

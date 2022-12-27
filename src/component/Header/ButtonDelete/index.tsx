@@ -5,7 +5,12 @@ import styles from '../header.module.css'
 import {useEffect} from "react";
 import {PropsButtonDelete} from "../types";
 
-const ButtonDelete = ({statusButtonDelete, setStatusButtonDelete, selectedRow}: PropsButtonDelete): JSX.Element => {
+const ButtonDelete = ({statusButtonDelete,
+                       setStatusButtonDelete,
+                       selectedRow,
+                       accept,
+                       setAccept,
+                        }: PropsButtonDelete): JSX.Element => {
 
     useEffect(() => {
         if (statusButtonDelete) {
@@ -16,8 +21,13 @@ const ButtonDelete = ({statusButtonDelete, setStatusButtonDelete, selectedRow}: 
     }, [statusButtonDelete])
 
     const handlerDeletedUser = () => {
-        console.log(selectedRow)
-        setStatusButtonDelete(!statusButtonDelete);
+        if (selectedRow === null) {
+            alert('Невозможно выполнить данное действие. ' +
+                'В начале еобходимо выбрать пользователя!')
+        } else {
+            console.log(selectedRow)
+            setAccept(!accept);
+        }
     }
 
     return (

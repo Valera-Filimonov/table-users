@@ -6,6 +6,8 @@ import ButtonDelete from "./ButtonDelete";
 
 const Header = ({open,
                  setOpen,
+                 accept,
+                 setAccept,
                  selectedRow,
                  statusButtonCreate,
                  setStatusButtonCreate,
@@ -19,6 +21,8 @@ const Header = ({open,
                 <ButtonDelete statusButtonDelete={statusButtonDelete}
                               setStatusButtonDelete={setStatusButtonDelete}
                               selectedRow={selectedRow}
+                              accept={accept}
+                              setAccept={setAccept}
                 />
                 <ButtonCreate open={open}
                               setOpen={setOpen}

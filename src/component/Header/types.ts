@@ -6,6 +6,8 @@ export type PropsHeader = {
     selectedRow: string | null;
     statusButtonDelete: boolean;
     setStatusButtonDelete: (statusButtonDelete: boolean) => void;
+    accept: boolean;
+    setAccept: (accept: boolean) => void;
 }
 
 export type PropsButtonCreate = {
@@ -19,4 +21,6 @@ export type PropsButtonDelete = {
     selectedRow: string | null;
     statusButtonDelete: boolean;
     setStatusButtonDelete: (statusButtonDelete: boolean) => void;
+    accept: boolean;
+    setAccept: (accept: boolean) => void;
 }
