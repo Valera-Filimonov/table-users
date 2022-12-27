@@ -1,7 +1,7 @@
-import ButtonCreate from './ButtonCreate';
-import styles from './header.module.css'
+import ButtonCreate from "./ButtonCreate";
+import styles from "./header.module.css"
 import {Typography} from "@mui/material";
-import {PropsHeader} from './types';
+import {PropsHeader} from "./types";
 import ButtonDelete from "./ButtonDelete";
 import ButtonChange from "./ButtonChange";
 

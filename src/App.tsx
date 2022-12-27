@@ -4,7 +4,7 @@ import ModalAddUser from "./component/ModalAddUser";
 import Table from "./component/Table";
 import ModalAccpetDelete from "./component/ModalAccpetDelete";
 import {useGetUsersMutation} from "./store/userApi";
-import styles from './app.module.css';
+import styles from "./app.module.css";
 import ModalChangeUser from "./component/ModalChangeUser";
 
 const App = (): JSX.Element => {
@@ -20,7 +20,7 @@ const App = (): JSX.Element => {
 
     useEffect( () => {
         setTimeout(() => {
-            getUser('users')
+            getUser("users");
         }, 2000)
     }, [statusButtonCreate, statusButtonChange, statusButtonDelete])
 

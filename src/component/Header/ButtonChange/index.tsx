@@ -1,7 +1,7 @@
 import Stack from "@mui/material/Stack";
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
 import * as React from "react";
-import styles from '../header.module.css'
+import styles from "../header.module.css"
 import {useEffect} from "react";
 import {PropsButtonChange} from "../types";
 
@@ -23,8 +23,8 @@ const ButtonChange = ({change,
 
     const handlerOpenModal = () => {
         if (selectedRow === null) {
-            alert('Невозможно выполнить данное действие. ' +
-                'В начале еобходимо выбрать пользователя!')
+            alert("Невозможно выполнить данное действие. " +
+                "В начале еобходимо выбрать пользователя!")
         } else {
             setChange(!change);
         }

@@ -1,8 +1,8 @@
-import Box from '@mui/material/Box';
-import {DataGrid} from '@mui/x-data-grid/DataGrid';
-import {GridColDef} from '@mui/x-data-grid/models/colDef';
-import {GridCellParams, GridValueGetterParams} from '@mui/x-data-grid/models/params';
-import * as React from 'react';
+import Box from "@mui/material/Box";
+import {DataGrid} from "@mui/x-data-grid/DataGrid";
+import {GridColDef} from "@mui/x-data-grid/models/colDef";
+import {GridCellParams, GridValueGetterParams} from "@mui/x-data-grid/models/params";
+import * as React from "react";
 import {ParamsSelectedRow, PropsTable} from "./types";
 import {useState} from "react";
 

@@ -1,13 +1,13 @@
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
-import TextField from '@mui/material/TextField';
-import {Checkbox} from '@mui/material';
-import styles from './modal.module.css'
-import ButtonAdd from './ButtonAdd';
-import ButtonClose from './ButtonClose';
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
+import TextField from "@mui/material/TextField";
+import {Checkbox} from "@mui/material";
+import styles from "./modal.module.css"
+import ButtonAdd from "./ButtonAdd";
+import ButtonClose from "./ButtonClose";
 import {ChangeEvent, useState} from "react";
-import { PropsModalAddUser } from './types';
+import { PropsModalAddUser } from "./types";
 
 const style = {
     position: 'absolute' as 'absolute',

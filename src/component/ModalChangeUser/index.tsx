@@ -1,12 +1,12 @@
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
-import TextField from '@mui/material/TextField';
-import {Checkbox} from '@mui/material';
-import styles from './modal.module.css'
-import ButtonClose from './ButtonClose';
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Modal from "@mui/material/Modal";
+import TextField from "@mui/material/TextField";
+import {Checkbox} from "@mui/material";
+import styles from "./modal.module.css"
+import ButtonClose from "./ButtonClose";
 import {ChangeEvent, useState} from "react";
-import {PropsModalChangeUser} from './types';
+import {PropsModalChangeUser} from "./types";
 import ButtonChange from "./ButtonChange";
 
 const style = {

@@ -1,7 +1,7 @@
 import Stack from "@mui/material/Stack";
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
 import * as React from "react";
-import styles from '../header.module.css'
+import styles from "../header.module.css"
 import {useEffect} from "react";
 import {PropsButtonDelete} from "../types";
 
@@ -22,8 +22,8 @@ const ButtonDelete = ({statusButtonDelete,
 
     const handlerDeletedUser = () => {
         if (selectedRow === null) {
-            alert('Невозможно выполнить данное действие. ' +
-                'В начале еобходимо выбрать пользователя!')
+            alert("Невозможно выполнить данное действие." +
+            "В начале еобходимо выбрать пользователя!")
         } else {
             setAccept(!accept);
         }
