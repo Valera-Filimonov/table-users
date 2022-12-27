@@ -22,7 +22,6 @@ const ButtonClose = ({change,
         setLastName('');
         setEmail('');
         setBirthDate('');
-        console.log(change)
     }
 
     return (

@@ -25,7 +25,6 @@ const ButtonDelete = ({statusButtonDelete,
             alert('Невозможно выполнить данное действие. ' +
                 'В начале еобходимо выбрать пользователя!')
         } else {
-            console.log(selectedRow)
             setAccept(!accept);
         }
     }

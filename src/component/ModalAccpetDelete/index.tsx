@@ -31,7 +31,6 @@ const ModalAccpetDelete = ({
     const handlerOnClose = () => {
         setAccept(!accept)
     }
-    console.log(selectedRow)
     return (
         <>
             <Modal

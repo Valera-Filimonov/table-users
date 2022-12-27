@@ -36,48 +36,36 @@ const ModalChangeUser = ({
     const initialLastName = selectedRow?.row?.lastName;
     const initialBirthDate = selectedRow?.row?.birthDate;
 
-    const [id, setId] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const [name, setName] = useState<string>('');
     const [lastName, setLastName] = useState<string>('');
     const [birthDate, setBirthDate] = useState<string>('')
     const [access, setAccess] = useState<boolean>(false);
 
-    const [errorId, setErrorId] = useState<boolean>(false);
     const [errorEmail, setErrorEmail] = useState<boolean>(false);
     const [errorName, setErrorName] = useState<boolean>(false);
     const [errorLastName, setErrorLastName] = useState<boolean>(false);
     const [errorBirthDate, setErrorBirthDate] = useState<boolean>(false);
 
-    const handlerOnChangeId = (event: ChangeEvent<HTMLInputElement>) => {
-        setId(event.target.value);
-    }
     const handlerOnChangeEmail = (event: ChangeEvent<HTMLInputElement>) => {
         setEmail(event.target.value);
-        console.log(email)
     }
     const handlerOnChangeName = (event: ChangeEvent<HTMLInputElement>) => {
         setName(event.target.value);
-        console.log(name)
     }
     const handlerOnChangeLastName = (event: ChangeEvent<HTMLInputElement>) => {
         setLastName(event.target.value);
-        console.log(lastName)
     }
     const handlerOnChangeBirthDate = (event: ChangeEvent<HTMLInputElement>) => {
         setBirthDate(event.target.value);
-        console.log(birthDate)
     }
     const handlerOnChangeAccess = (event: ChangeEvent<HTMLInputElement>) => {
         setAccess(event.target.checked)
-        console.log(access)
     }
 
     const handlerOnClose = () => {
-        setChange(!change)
     }
 
-    console.log(id, 'fjfjfjf')
     return (
         <>
             <Modal
@@ -159,21 +147,18 @@ const ModalChangeUser = ({
                                       birthDate={birthDate}
                                       access={access}
 
-                                      setId={setId}
                                       setEmail={setEmail}
                                       setName={setName}
                                       setLastName={setLastName}
                                       setBirthDate={setBirthDate}
 
-                                      setErrorId={setErrorId}
                                       setErrorEmail={setErrorEmail}
                                       setErrorName={setErrorName}
                                       setErrorLastName={setErrorLastName}
                                       setErrorBirthDay={setErrorBirthDate}
                                       initialId={initialId}
                         />
-                        <ButtonClose setId={setId}
-                                     setEmail={setEmail}
+                        <ButtonClose setEmail={setEmail}
                                      setName={setName}
                                      setLastName={setLastName}
                                      setBirthDate={setBirthDate}

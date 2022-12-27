@@ -42,23 +42,18 @@ const ModalAddUser = ({open, setOpen, statusButtonCreate, setStatusButtonCreate}
     }
     const handlerOnChangeEmail = (event: ChangeEvent<HTMLInputElement>) => {
         setEmail(event.target.value);
-        console.log(email)
     }
     const handlerOnChangeName = (event: ChangeEvent<HTMLInputElement>) => {
         setName(event.target.value);
-        console.log(name)
     }
     const handlerOnChangeLastName = (event: ChangeEvent<HTMLInputElement>) => {
         setLastName(event.target.value);
-        console.log(lastName)
     }
     const handlerOnChangeBirthDate = (event: ChangeEvent<HTMLInputElement>) => {
         setBirthDate(event.target.value);
-        console.log(birthDate)
     }
     const handlerOnChangeAccess = (event: ChangeEvent<HTMLInputElement>) => {
         setAccess(event.target.checked)
-        console.log(access)
     }
 
     const handlerOnClose = () => {

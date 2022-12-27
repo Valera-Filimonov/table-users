@@ -17,13 +17,11 @@ const ButtonChange = ({
                        birthDate,
                        access,
 
-                       setId,
                        setName,
                        setLastName,
                        setBirthDate,
                        setEmail,
 
-                       setErrorId,
                        setErrorEmail,
                        setErrorName,
                        setErrorLastName,
@@ -32,9 +30,6 @@ const ButtonChange = ({
                    }: PropsButtonAdd):
     JSX.Element => {
     const [changeUser] = useChangeUserMutation()
-
-    console.log(initialId, 'ahahhahahah');
-
 
     const handlerCloseModal = async () => {
         if (!/^\S+@\S+\.\S+$/g.test(email)) {
@@ -58,7 +53,6 @@ const ButtonChange = ({
             setErrorBirthDay(false);
         }
         if (
-            /^(0|[1-9]\d*)$/g.test(id) &&
             /^\S+@\S+\.\S+$/g.test(email) &&
             /^[a-zA-Zа-яА-Я]+$/g.test(name) &&
             /^[a-zA-Zа-яА-Я]+$/g.test(lastName) &&

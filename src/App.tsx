@@ -22,7 +22,7 @@ const App = (): JSX.Element => {
         setTimeout(() => {
             getUser('users')
         }, 2000)
-    }, [open, accept, change])
+    }, [statusButtonCreate, statusButtonChange, statusButtonDelete])
 
     return (
         <div className={styles.app}>

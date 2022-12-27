@@ -26,11 +26,8 @@ const ButtonChange = ({change,
             alert('Невозможно выполнить данное действие. ' +
                 'В начале еобходимо выбрать пользователя!')
         } else {
-            console.log(selectedRow)
             setChange(!change);
         }
-
-        console.log(change)
     }
 
     return (

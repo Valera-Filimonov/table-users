@@ -11,7 +11,6 @@ const Table = ({setSelectedRow, data, error, isLoading}: PropsTable): JSX.Elemen
 
     const handlerSelectedRow = (params: ParamsSelectedRow): boolean => {
         setSelectedRow(params);
-        console.log(params)
         return true
     }
 

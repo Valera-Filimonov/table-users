@@ -9,7 +9,6 @@ const ButtonClose = ({accept, setAccept, setSelectedRow}: PropsButtonClose): JSX
     const handlerCloseModal = () => {
         setAccept(!accept);
         setSelectedRow(null);
-        console.log(accept)
     }
 
     return (

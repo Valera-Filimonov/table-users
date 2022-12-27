@@ -8,7 +8,6 @@ const ButtonClose = ({open, setOpen}: PropsButtonClose): JSX.Element => {
 
     const handlerCloseModal = () => {
         setOpen(!open);
-        console.log(open)
     }
 
     return (

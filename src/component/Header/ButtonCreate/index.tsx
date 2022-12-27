@@ -22,7 +22,6 @@ const ButtonCreate = ({open,
 
     const handlerOpenModal = () => {
         setOpen(!open);
-        console.log(open)
     }
 
     return (
