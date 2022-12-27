@@ -24,7 +24,7 @@ const ButtonChange = ({change,
     const handlerOpenModal = () => {
         if (selectedRow === null) {
             alert("Невозможно выполнить данное действие. " +
-                "В начале еобходимо выбрать пользователя!")
+                "В начале необходимо выбрать пользователя!")
         } else {
             setChange(!change);
         }

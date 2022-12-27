@@ -23,7 +23,7 @@ const ButtonDelete = ({statusButtonDelete,
     const handlerDeletedUser = () => {
         if (selectedRow === null) {
             alert("Невозможно выполнить данное действие." +
-            "В начале еобходимо выбрать пользователя!")
+            "В начале необходимо выбрать пользователя!")
         } else {
             setAccept(!accept);
         }
