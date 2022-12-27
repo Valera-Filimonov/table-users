@@ -5,15 +5,19 @@ import styles from '../header.module.css'
 import {useEffect} from "react";
 import { PropsButtonCreate } from "../types";
 
-const ButtonCreate = ({open, setOpen, status, setStatus}: PropsButtonCreate): JSX.Element => {
+const ButtonCreate = ({open,
+                       setOpen,
+                       statusButtonCreate,
+                       setStatusButtonCreate
+                       }: PropsButtonCreate): JSX.Element => {
 
     useEffect(() => {
-        if (status) {
+        if (statusButtonCreate) {
             setTimeout(() => {
-                setStatus(false);
+                setStatusButtonCreate(false);
             }, 500)
         }
-    }, [status])
+    }, [statusButtonCreate])
 
 
     const handlerOpenModal = () => {
@@ -22,16 +26,16 @@ const ButtonCreate = ({open, setOpen, status, setStatus}: PropsButtonCreate): JS
     }
 
     return (
-        <div className={styles.button}>
+        <div className={styles.buttonCreate}>
             <Stack spacing={2} direction="row">
-                {!status &&
+                {!statusButtonCreate &&
                 <Button onClick={handlerOpenModal}
                         variant="contained"
                 >
                     Создать
                 </Button>
                 }
-                {status &&
+                {statusButtonCreate &&
                 <Button onClick={handlerOpenModal}
                         variant="contained"
                         color="success"

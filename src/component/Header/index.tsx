@@ -2,16 +2,30 @@ import ButtonCreate from './ButtonCreate';
 import styles from './header.module.css'
 import {Typography} from "@mui/material";
 import { PropsHeader } from './types';
+import ButtonDelete from "./ButtonDelete";
 
-const Header = ({open, setOpen, status, setStatus}: PropsHeader): JSX.Element => {
+const Header = ({open,
+                 setOpen,
+                 selectedRow,
+                 statusButtonCreate,
+                 setStatusButtonCreate,
+                 statusButtonDelete,
+                 setStatusButtonDelete
+                }: PropsHeader): JSX.Element => {
     return (
         <div className={styles.header}>
             <Typography className={styles.title} variant="h6" gutterBottom>Таблица пользователей</Typography>
-            <ButtonCreate open={open}
-                          setOpen={setOpen}
-                          status={status}
-                          setStatus={setStatus}
-            />
+            <div className={styles.buttonGroup}>
+                <ButtonDelete statusButtonDelete={statusButtonDelete}
+                              setStatusButtonDelete={setStatusButtonDelete}
+                              selectedRow={selectedRow}
+                />
+                <ButtonCreate open={open}
+                              setOpen={setOpen}
+                              statusButtonCreate={statusButtonCreate}
+                              setStatusButtonCreate={setStatusButtonCreate}
+                />
+            </div>
         </div>
     );
 }

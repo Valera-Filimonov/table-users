@@ -1,15 +1,15 @@
 export type PropsModalAddUser = {
     open: boolean;
     setOpen: (open: boolean) => void;
-    status: boolean;
-    setStatus: (status: boolean) => void;
+    statusButtonCreate: boolean;
+    setStatusButtonCreate: (statusButtonCreate: boolean) => void;
 }
 
 export type PropsButtonAdd = {
     open: boolean;
     setOpen: (open: boolean) => void;
-    status: boolean;
-    setStatus: (status: boolean) => void;
+    statusButtonCreate: boolean;
+    setStatusButtonCreate: (statusButtonCreate: boolean) => void;
 
     id: string;
     email: string;

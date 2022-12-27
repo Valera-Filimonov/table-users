@@ -22,7 +22,7 @@ const style = {
     p: 4,
 };
 
-const ModalAddUser = ({open, setOpen, status, setStatus}: PropsModalAddUser): JSX.Element => {
+const ModalAddUser = ({open, setOpen, statusButtonCreate, setStatusButtonCreate}: PropsModalAddUser): JSX.Element => {
 
     const [id, setId] = useState<string>('');
     const [email, setEmail] = useState<string>('');
@@ -144,8 +144,8 @@ const ModalAddUser = ({open, setOpen, status, setStatus}: PropsModalAddUser): JS
                         <ButtonAdd open={open}
                                    setOpen={setOpen}
 
-                                   status={status}
-                                   setStatus={setStatus}
+                                   statusButtonCreate={statusButtonCreate}
+                                   setStatusButtonCreate={setStatusButtonCreate}
 
                                    id={id}
                                    email={email}

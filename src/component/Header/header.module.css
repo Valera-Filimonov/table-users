@@ -6,11 +6,21 @@
     min-width: 485px;
 }
 
-.button {
+.buttonGroup {
+    display: flex;
     padding-top: 10px;
     padding-right: 10px;
     margin-left: auto;
-    margin-right: 0
+    margin-right: 0;
+}
+
+.buttonCreate {
+    margin-left: 10px;
+    height: 24px;
+}
+
+.buttonDelete {
+    height: 24px;
 }
 
 .title {

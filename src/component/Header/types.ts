@@ -1,13 +1,22 @@
 export type PropsHeader = {
     open: boolean;
     setOpen: (open: boolean) => void;
-    status: boolean;
-    setStatus: (status: boolean) => void;
+    statusButtonCreate: boolean;
+    setStatusButtonCreate: (statusButtonCreate: boolean) => void;
+    selectedRow: string | null;
+    statusButtonDelete: boolean;
+    setStatusButtonDelete: (statusButtonDelete: boolean) => void;
 }
 
 export type PropsButtonCreate = {
     open: boolean;
     setOpen: (open: boolean) => void;
-    status: boolean;
-    setStatus: (status: boolean) => void;
+    statusButtonCreate: boolean;
+    setStatusButtonCreate: (statusButtonCreate: boolean) => void;
+}
+
+export type PropsButtonDelete = {
+    selectedRow: string | null;
+    statusButtonDelete: boolean;
+    setStatusButtonDelete: (statusButtonDelete: boolean) => void;
 }

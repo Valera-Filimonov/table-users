@@ -7,21 +7,26 @@ import Table from "./component/Table";
 const App = (): JSX.Element => {
 
     const [open, setOpen] = useState<boolean>(false);
-    const [status, setStatus] = useState<boolean>(false)
+    const [statusButtonCreate, setStatusButtonCreate] = useState<boolean>(false);
+    const [statusButtonDelete, setStatusButtonDelete] = useState<boolean>(false)
+    const [selectedRow, setSelectedRow] = useState<string | null>(null)
 
     return (
         <div className={styles.app}>
             <Header open={open}
                     setOpen={setOpen}
-                    status={status}
-                    setStatus={setStatus}
+                    selectedRow={selectedRow}
+                    statusButtonCreate={statusButtonCreate}
+                    setStatusButtonCreate={setStatusButtonCreate}
+                    statusButtonDelete={statusButtonDelete}
+                    setStatusButtonDelete={setStatusButtonDelete}
             />
             <ModalAddUser open={open}
                           setOpen={setOpen}
-                          status={status}
-                          setStatus={setStatus}
+                          statusButtonCreate={statusButtonCreate}
+                          setStatusButtonCreate={setStatusButtonCreate}
             />
-            <Table />
+            <Table setSelectedRow={setSelectedRow}/>
         </div>
     );
 }
