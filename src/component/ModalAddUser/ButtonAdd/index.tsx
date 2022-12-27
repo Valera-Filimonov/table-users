@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import * as React from "react";
 import styles from '../modal.module.css'
 import { PropsButtonAdd } from "../types";
+import {usePostUserMutation} from "../../../store/userApi";
 
 const ButtonAdd = ({
                        open,
@@ -15,6 +16,7 @@ const ButtonAdd = ({
                        name,
                        lastName,
                        birthDate,
+                       access,
 
                        setId,
                        setName,
@@ -29,8 +31,10 @@ const ButtonAdd = ({
                        setErrorBirthDay,
                    }: PropsButtonAdd):
     JSX.Element => {
+    const [postUser] = usePostUserMutation()
 
-    const handlerCloseModal = () => {
+
+    const handlerCloseModal = async () => {
         if (!/^(0|[1-9]\d*)$/g.test(id)) {
             setErrorId(true);
         } else {
@@ -65,6 +69,15 @@ const ButtonAdd = ({
         ) {
             setOpen(!open)
             setStatusButtonCreate(!statusButtonCreate);
+
+            await postUser({
+                id: id,
+                email: email,
+                name: name,
+                lastName: lastName,
+                birthDate: birthDate,
+                access: access
+            }).unwrap()
 
             setId('')
             setName('')

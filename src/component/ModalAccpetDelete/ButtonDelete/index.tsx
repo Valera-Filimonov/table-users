@@ -1,8 +1,8 @@
 import Stack from "@mui/material/Stack";
 import Button from '@mui/material/Button';
 import * as React from "react";
-import styles from '../modal.module.css'
 import { PropsButtonDelete } from "../types";
+import {useDeleteUserMutation} from "../../../store/userApi";
 
 const ButtonDelete = ({
                       accept,
@@ -10,12 +10,15 @@ const ButtonDelete = ({
                       setStatusButtonDelete,
                       statusButtonDelete,
                       setSelectedRow,
+                      selectedRow,
                    }: PropsButtonDelete):
     JSX.Element => {
+    const [deleteUser] = useDeleteUserMutation()
 
-    const handlerCloseModal = () => {
+    const handlerCloseModal = async () => {
             setAccept(!accept);
             setStatusButtonDelete(!statusButtonDelete);
+            await deleteUser(selectedRow);
             setSelectedRow(null);
     }
 

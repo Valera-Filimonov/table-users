@@ -16,6 +16,7 @@ export type PropsButtonAdd = {
     name: string;
     lastName: string;
     birthDate: string;
+    access: boolean;
 
     setId: (arg: string) => void;
     setEmail: (arg: string) => void;

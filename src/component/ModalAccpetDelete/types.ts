@@ -18,5 +18,6 @@ export type PropsButtonDelete = {
     setAccept: (accept: boolean) => void;
     statusButtonDelete: boolean;
     setStatusButtonDelete: (arg: boolean) => void;
+    selectedRow: string | null;
     setSelectedRow: (selectedRow: null) => void;
 }

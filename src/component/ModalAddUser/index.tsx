@@ -152,6 +152,7 @@ const ModalAddUser = ({open, setOpen, statusButtonCreate, setStatusButtonCreate}
                                    name={name}
                                    lastName={lastName}
                                    birthDate={birthDate}
+                                   access={access}
 
                                    setId={setId}
                                    setEmail={setEmail}

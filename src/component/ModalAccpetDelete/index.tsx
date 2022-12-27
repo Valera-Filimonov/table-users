@@ -56,7 +56,9 @@ const ModalAccpetDelete = ({
                                       setStatusButtonDelete={setStatusButtonDelete}
                                       statusButtonDelete={statusButtonDelete}
                                       setSelectedRow={setSelectedRow}
-                                      setAccept={setAccept} />
+                                      setAccept={setAccept}
+                                      selectedRow={selectedRow}
+                        />
                         <ButtonClose accept={accept}
                                      setAccept={setAccept}
                                      setSelectedRow={setSelectedRow}
